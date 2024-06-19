@@ -61,7 +61,6 @@ npm run tauri icon your-icon.png
 ```sh
 npm install
 npm run tauri build
-npm run tauri icon your-icon.png
 ```
 ### Workflows
 Workflows can be used to automatically compile and release your code.
