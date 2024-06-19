@@ -4,6 +4,47 @@
 ### [Prerequisites](docs/prerequisites.md)
 These should be completed prior to compiling or running the code
 
+### Installing Prerequisites for Raspberry pi
+I
+```sh
+sudo apt update
+sudo apt install libwebkit2gtk-4.1-dev \
+  build-essential \
+  curl \
+  wget \
+  file \
+  libxdo-dev \
+  libssl-dev \
+  libayatana-appindicator3-dev \
+  librsvg2-dev
+sudo npm install --force -g npm@latest
+sudo npm install --force -g nodejs@latest
+```
+#### Adjusting the Swapfile
+```sh
+sudo dphys-swapfile swapoff
+sudo nano /etc/dphys-swapfile
+```
+Change the variable `CONF_SWAPSIZE=` to your desired value in megabytes, normally around 6144
+Uncomment the bottom variable and change it to the same value
+Type in `CTRL + X` followed by `Y` and then `ENTER`
+```sh
+sudo dphys-swapfile setup
+sudo dphys-swapfile swapon
+```
+Reboot the system
+```sh
+sudo reboot
+```
+#### Install Rustup
+```sh
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+```
+Reboot the system again
+```sh
+sudo reboot
+```
+
 ### Running the code
 The html and css is located in the src folder, if you want to, you can use javascript as well.
 Note: Iframes may have issues with some sites.
