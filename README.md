@@ -5,7 +5,6 @@
 These should be completed prior to compiling or running the code
 
 ### Installing Prerequisites for Raspberry pi
-I
 ```sh
 sudo apt update
 sudo apt install libwebkit2gtk-4.1-dev \
